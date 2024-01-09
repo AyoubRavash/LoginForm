@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupLoginButton() {
 
-        val message = "Welcome Back!"
+        val message = getString(R.string.welcome_back)
 
         val loginIntent = Intent(this, LoginMessageActivity::class.java)
         loginIntent.putExtra("Message", message)

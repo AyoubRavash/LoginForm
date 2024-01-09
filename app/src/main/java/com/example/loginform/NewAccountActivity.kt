@@ -1,5 +1,6 @@
 package com.example.loginform
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,6 +17,8 @@ class NewAccountActivity : AppCompatActivity() {
     private lateinit var emailEditText: TextInputEditText
     private lateinit var passwordEditText: TextInputEditText
     private lateinit var newAccButton: Button
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_account)
@@ -29,6 +32,15 @@ class NewAccountActivity : AppCompatActivity() {
         newAccButton.setOnClickListener {
             setupButton()
         }
+    }
+
+    private fun findViews() {
+        firstNameEditText = findViewById(R.id.edit_text_first_name)
+        lastNameEditText = findViewById(R.id.edit_text_last_name)
+        ageSpinner = findViewById(R.id.spinner_age)
+        emailEditText = findViewById(R.id.edit_text_email)
+        passwordEditText = findViewById(R.id.edit_text_password)
+        newAccButton = findViewById(R.id.button_create_new_acc)
     }
 
     private fun setupButton() {
@@ -46,12 +58,4 @@ class NewAccountActivity : AppCompatActivity() {
         startActivity(newAccIntent)
     }
 
-    private fun findViews() {
-        firstNameEditText = findViewById(R.id.edit_text_first_name)
-        lastNameEditText = findViewById(R.id.edit_text_last_name)
-        ageSpinner = findViewById(R.id.spinner_age)
-        emailEditText = findViewById(R.id.edit_text_email)
-        passwordEditText = findViewById(R.id.edit_text_password)
-        newAccButton = findViewById(R.id.button_new_acc)
-    }
 }

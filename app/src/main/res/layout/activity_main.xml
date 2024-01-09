@@ -16,7 +16,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="32dp"
             android:layout_marginBottom="36dp"
-            android:src="@drawable/icons8_device_100__1_" />
+            android:src="@drawable/icons8_device_100" />
 
         <TextView
             android:id="@+id/text_view_login"
@@ -36,7 +36,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,7 +51,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/white" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,7 +64,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="40dp"
             android:fontFamily="sans-serif-medium"
-            android:text="@string/login" />
+            android:text="@string/login"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/text_view_new_acc"
@@ -71,8 +74,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="54dp"
             android:fontFamily="sans-serif-light"
-            android:text="@string/don_t_have_acc"
-            android:textColor="#616161" />
+            android:text="@string/don_t_have_acc" />
 
         <Button
             android:id="@+id/button_new_acc"
@@ -82,6 +84,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:text="@string/new_account"
+            android:textColor="@color/white"
             android:textSize="12sp" />
 
     </LinearLayout>

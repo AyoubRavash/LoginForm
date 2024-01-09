@@ -1,42 +1,52 @@
 package com.example.loginform
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
 class AccInfoActivity : AppCompatActivity() {
 
-    private lateinit var messageTextView: TextView
+    private lateinit var helloTextView: TextView
+    private lateinit var nameTextView: TextView
+    private lateinit var emailTextView: TextView
+    private lateinit var passwordTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acc_info)
 
-        messageTextView = findViewById(R.id.text_view_message)
+        helloTextView = findViewById(R.id.text_view_Hello)
+        nameTextView = findViewById(R.id.text_view_acc_name)
+        emailTextView = findViewById(R.id.text_view_acc_email)
+        passwordTextView = findViewById(R.id.text_view_acc_password)
 
         @Suppress("DEPRECATION")
         val message = intent.getSerializableExtra("Message") as Message
 
+        displayMessage(message)
 
-        val welcomeMessage = displayMessage(message)
-
-        messageTextView.text = welcomeMessage
+        emailTextView.setOnClickListener {
+            val intent = Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("mailto: ${message.email}")
+            }
+            startActivity(intent)
+        }
     }
 
-    private fun displayMessage(message: Message): String {
-        val welcomeMessage = """
-                Hello ${message.firstName} ${message.lastName}
-                
-                Here is your account info :
-                
-                First name : ${message.firstName}
-                Last name : ${message.lastName}
-                Age : ${message.age}
-                Email Address : ${message.email}
-                Password : ${message.password}
-                
-                See you later...!
-            """.trimIndent()
+    private fun displayMessage(message: Message) {
 
-        return welcomeMessage
+        helloTextView.text = """
+            Hello ${message.firstName} ${message.lastName}
+            Here is your account INFO :
+        """.trimIndent()
+        nameTextView.text = """
+            First name = ${message.firstName}
+            Last name : ${message.lastName}
+        """.trimIndent()
+        emailTextView.text = "Email address : ${message.email}"
+        passwordTextView.text = "Password : ${message.password}"
+
     }
 }
