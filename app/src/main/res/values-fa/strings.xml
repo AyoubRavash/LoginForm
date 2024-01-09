@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">فرم عضویت</string>
+
+    <string name="login">عضویت</string>
+    <string name="email">ایمیل</string>
+    <string name="password">رمز عبور</string>
+    <string name="don_t_have_acc">حساب کاربری ندارید ؟</string>
+    <string name="new_account">حساب کاربری جدید</string>
+    <string name="create_new_account">ساخت حساب کاربری جدید</string>
+    <string name="first_name">نام</string>
+    <string name="last_name">نام خانوادگی</string>
+    <string name="age">سن : </string>
+    <string name="welcome">خوش آمدید</string>
+    <string name="account_info">اطلاعات حساب کاربری</string>
+    <string name="welcome_back">خوش آمدید!</string>
+
+</resources>
