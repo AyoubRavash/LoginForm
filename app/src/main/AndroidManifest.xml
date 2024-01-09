@@ -13,22 +13,23 @@
         android:theme="@style/Theme.LoginForm"
         tools:targetApi="31">
         <activity
+            android:label="@string/account_info"
             android:name=".AccInfoActivity"
+            android:parentActivityName=".NewAccountActivity"
             android:exported="false" />
         <activity
             android:name=".NewAccountActivity"
             android:exported="false"
-            android:label="Create New Account"
+            android:label="@string/create_new_account"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".LoginMessageActivity"
             android:exported="false"
-            android:label="Welcome"
+            android:label="@string/welcome"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="Welcome">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

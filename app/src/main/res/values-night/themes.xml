@@ -3,5 +3,18 @@
     <style name="Base.Theme.LoginForm" parent="Theme.Material3.DayNight">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <item name="colorAccent">@color/white</item>
+        <item name="colorPrimary">@color/actionbar</item>
+        <item name="colorPrimaryDark">@color/statusbar</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="textInputStyle">@color/white</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:navigationBarColor">@color/statusbar</item>
+        <item name="android:spinnerItemStyle">@color/statusbar</item>
+
     </style>
+
+    <style name="Theme.LoginForm" parent="Base.Theme.LoginForm" />
 </resources>
